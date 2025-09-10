@@ -61,13 +61,13 @@ doctorin-e2e-tests/
 
 ---
 
-# Technologies Used and Their Purpose
+## Technologies Used and Their Purpose
 
 | Teknoloji / Araç                 | Sürüm    | Amaç / Kullanım                                                                 |
 |----------------------------------|---------:|----------------------------------------------------------------------------------|
 | **Java (JDK)**                   | 21       | Test otomasyonu dili                                                             |
-| **Selenium**                     | 4.26.0   | Web arayüz otomasyonu; bekleme ve etkileşim API’leri                                  |
-| **Cucumber (Java/TestNG/Pico)**  | 7.17.0   | BDD çerçevesi; Feature dosyaları ile Step tanımlarının eşleştirilmesi                                          |
+| **Selenium**                     | 4.26.0   | Web arayüz otomasyonu; bekleme ve etkileşim API’leri                             |
+| **Cucumber (Java/TestNG/Pico)**  | 7.17.0   | BDD çerçevesi; Feature dosyaları ile Step tanımlarının eşleştirilmesi                       |
 | **TestNG**                       | 7.10.2   | Test koşumu, paralel çalıştırma ve doğrulama altyapısı                           |
 | **WebDriverManager**             | 5.9.2    | Yerel sürücülerin otomatik yönetimi                                             |
 | **Allure Framework**             | 2.29.0   | Zengin test raporları; adım akışı ve ekler                                      |
@@ -79,7 +79,7 @@ doctorin-e2e-tests/
 
 ## Test Coverage
 
-**1. Kimlik Doğrulama & Kurum Seçimi**: Giriş sayfasının yüklenmesi (iframe duyarlılığı), kiracı seçimi ve formun kaydedilmesi, geçerli kullanıcıyla oturum açılması ve kontrol paneline (dashboard) yönlendirme.
+**1. Kimlik Doğrulama & Kurum Seçimi**: Giriş sayfasının yüklenmesi (iframe duyarlılığı), kurum seçimi ve formun kaydedilmesi, geçerli kullanıcıyla oturum açılması ve kontrol paneline (dashboard) yönlendirme.
 
 **2. Randevular – Filtreler**: Filtre panelinin açılması ve uygulanması; Şube, Departman, Doktor alanları arasındaki bağımlılıkların doğrulanması; çoklu doktor seçiminde yalnızca hedef doktorun bırakılması.
 
