@@ -1,0 +1,144 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.doctorin.qa</groupId>
+    <artifactId>doctorin-e2e-tests</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>doctorin-e2e-tests</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+
+        <selenium.version>4.26.0</selenium.version>
+        <wdm.version>5.9.2</wdm.version>
+        <testng.version>7.10.2</testng.version>
+        <cucumber.version>7.17.0</cucumber.version>
+        <allure.version>2.29.0</allure.version>
+        <allure.maven.plugin.version>2.12.0</allure.maven.plugin.version>
+        <slf4j.version>2.0.13</slf4j.version>
+        <assertj.version>3.26.3</assertj.version>
+        <surefire.version>3.2.5</surefire.version>
+        <compiler.plugin.version>3.13.0</compiler.plugin.version>
+
+        <env>test</env>
+        <browser>chrome</browser>
+        <cucumber.filter.tags>@appointment_e2e</cucumber.filter.tags>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${wdm.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${testng.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber7-jvm</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler.plugin.version}</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+                <configuration>
+                    <useModulePath>false</useModulePath>
+                    <includes>
+                        <include>**/*Runner.java</include>
+                    </includes>
+                    <systemPropertyVariables>
+                        <cucumber.filter.tags>${cucumber.filter.tags}</cucumber.filter.tags>
+                        <env>${env}</env>
+                        <browser>${browser}</browser>
+                    </systemPropertyVariables>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure.maven.plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
