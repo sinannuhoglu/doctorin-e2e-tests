@@ -10,7 +10,7 @@ Bu proje, Doctorin platformu için **Selenium, Java, Cucumber (BDD)** teknolojil
 
 ---
 
-## Proje Structure
+## Proje Yapısı
 
 ```text
 doctorin-e2e-tests/
@@ -61,7 +61,7 @@ doctorin-e2e-tests/
 
 ---
 
-## Technologies Used and Their Purpose
+## Kullanılan Teknolojiler ve Amaçları
 
 | Teknoloji / Araç                 | Sürüm    | Amaç / Kullanım                                                                 |
 |----------------------------------|---------:|----------------------------------------------------------------------------------|
@@ -77,7 +77,7 @@ doctorin-e2e-tests/
 
 ---
 
-## Test Coverage
+## Test Kapsamı
 
 **1. Kimlik Doğrulama & Kurum Seçimi**: Giriş sayfasının yüklenmesi (iframe duyarlılığı), kurum seçimi ve formun kaydedilmesi, geçerli kullanıcıyla oturum açılması ve kontrol paneline (dashboard) yönlendirme.
 
@@ -86,4 +86,17 @@ doctorin-e2e-tests/
 **3. Randevu Yaşam Döngüsü**: Slot tıklama (dakika 00 ile 30 sıralamasının dinamik belirlenmesi), hasta arama ve seçme, yan panelde kaydetme, hızlı bilgi penceresinde check-in durumunun görülmesi, silme onayı ve gerekliyse gerekçe diyalogunun kapatılması, ilgili kartın ekranda yer almamasının doğrulanması.
 
 **4. Çalışma Takvimi**: Kaynağı düzenleme diyalogunun açılması, Çalışma Takvimi sekmesine geçiş, gün ve saat aralıklarının girilmesi, Şube, Randevu Tipi, Platform ve Departman seçimleri, değişikliklerin kaydedilmesi ve Randevular sayfasına dönüşün doğrulanması.
+
+---
+
+## Manuel Test ve Hata Raporları
+
+Otomasyon testlerine ek olarak, manuel test süreçlerinde yakalanan bulgular ve bug raporları hazırlanmıştır.  
+
+### Paylaşılan Raporlar
+- [Doctorin_QA_TestPack_Sinan_Nuhoglu_2025-09-10.xlsx](https://docs.google.com/spreadsheets/d/1DkVzuld5MFajfxQj-7GU36g9h4VCDp6b/edit?usp=sharing&ouid=100357117076298410131&rtpof=true&sd=true) – Manuel test case’leri, bug listesi ve önceliklendirme matrisi.
+- [Doctorin_QA_BugReport_Sinan_Nuhoglu_2025-09-10.pdf](https://drive.google.com/file/d/1pFEAtCKKmuG7h-QpVWWSfgQFMQTfFENU/view?usp=sharing) – Detaylı bug raporları (Summary, Steps, Expected, Actual, Severity, Priority).  
+- [Doctorin_QA_Feedback_Improvements_Sinan_Nuhoglu_2025-09-10.pdf](https://drive.google.com/file/d/1Xvn-mHEpxtqfYjqZJxcBB1Vqrqo5gaP6/view?usp=sharing) – Kullanıcı deneyimi ve arayüz geliştirme önerileri.  
+
+
 
